@@ -5,7 +5,6 @@
 `Database` 에서 정규화(`Normalization`) 란?
 
 > 데이터의 중복을 줄이고, 무결성을 향상시킬 수 있는 정규화에 대해 알아보자.
-> 
 
 ### Normalization
 
@@ -26,27 +25,27 @@
 - 모든 속성에는 반복되는 그룹이 나타나지 않는다.
 - 기본키를 사용하여 관련 데이터의 각 집합을 고유하게 식별할 수 있어야 한다.
 
-![Untitled](%E1%84%8C%E1%85%A5%E1%86%BC%E1%84%80%E1%85%B2%E1%84%92%E1%85%AA%20(Normalization)%20c2808a71646b49d9a40c147cf552ab67/Untitled.png)
+![Untitled](images/Untitled.png)
 
 전화번호를 여러 개 가지고 있어 원자값이 아니다. 1NF를 지킨 아래의 테이블.
 
-![Untitled](%E1%84%8C%E1%85%A5%E1%86%BC%E1%84%80%E1%85%B2%E1%84%92%E1%85%AA%20(Normalization)%20c2808a71646b49d9a40c147cf552ab67/Untitled%201.png)
+![Untitled](images/Untitled%201.png)
 
 ### 제 2정규화 (2NF) - 테이블의 모든 컬럼이 완전 함수적 종속을 만족
 
 ---
 
-![Untitled](%E1%84%8C%E1%85%A5%E1%86%BC%E1%84%80%E1%85%B2%E1%84%92%E1%85%AA%20(Normalization)%20c2808a71646b49d9a40c147cf552ab67/Untitled%202.png)
+![Untitled](images/Untitled%202.png)
 
 위의 테이블을 보면 기본 키가 복합 키(`Manufacture`, `Model`) 로 묶여있다. 두 키중 하나의 키 만으로 다른 컬럼을 결정지을 수 있으면 안된다.
 
-이게 무슨말이냐, 
+이게 무슨말이냐,
 
 `Manufacturer Country` 는 `Manufacture` 에 의해 결정이 된다. (생산한 곳과 생산한 국가는 연결됨)
 
 `Model` 과 `Manufacturer Country` 는 아무런 연관 관계가 없는 상황!
 
-![Untitled](%E1%84%8C%E1%85%A5%E1%86%BC%E1%84%80%E1%85%B2%E1%84%92%E1%85%AA%20(Normalization)%20c2808a71646b49d9a40c147cf552ab67/Untitled%203.png)
+![Untitled](images/Untitled%203.png)
 
 완전 함수적 종속을 충족시키지 못하고 있는 테이블을 위와 같이 분리하여 2NF를 만족시킬 수 있다.
 
@@ -55,7 +54,6 @@
 ---
 
 > 이행적 종속: A → B, B → C 면 A → C 가 성립된다.
-> 
 
 아래 두가지 조건을 만족시켜야 한다.
 
@@ -66,8 +64,8 @@
 
 하지만 `Winner Date of Birth` 컬럼은 `Winner` 에 의존한다. 따라서 3NF를 만족하지 못한다. (기본키가 아닌 속성들은 기본키에 의존한다)
 
-![Untitled](%E1%84%8C%E1%85%A5%E1%86%BC%E1%84%80%E1%85%B2%E1%84%92%E1%85%AA%20(Normalization)%20c2808a71646b49d9a40c147cf552ab67/Untitled%204.png)
+![Untitled](images/Untitled%204.png)
 
 아래의 테이블과 같이 분리하자.
 
-![Untitled](%E1%84%8C%E1%85%A5%E1%86%BC%E1%84%80%E1%85%B2%E1%84%92%E1%85%AA%20(Normalization)%20c2808a71646b49d9a40c147cf552ab67/Untitled%205.png)
+![Untitled](images/Untitled%205.png)

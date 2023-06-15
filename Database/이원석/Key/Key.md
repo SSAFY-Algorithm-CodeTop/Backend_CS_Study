@@ -4,7 +4,7 @@
 
 `Database` 에서 `Key` 란? 저장한 데이터들을 정렬시에 Tuple을 구분할 수 있는 기준이 되는 속성이다.
 
-![Untitled](Key%206348ffa2b5a444a69cd4e0f7d506c392/Untitled.png)
+![Untitled](images/Untitled.png)
 
 ### 1. Candidate Key (후보 키) - 유일성 O, 최소성 O
 
